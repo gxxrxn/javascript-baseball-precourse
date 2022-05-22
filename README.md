@@ -27,7 +27,7 @@
 
 ### 💻 실행 결과
 
-![baseball_result_gif](https://github.com/woowacourse/javascript-baseball-precourse/blob/main/images/result.gif?raw=true)
+![baseball_result_gif](./images/baseball_demo.gif)
 
 <br>
 
@@ -63,23 +63,20 @@ play(123, 134); // '1볼 1스트라이크'
 play(123, 132); // '2볼 1스트라이크'
 play(123, 124); // '2스트라이크'
 ```
-### DOM 선택자
-각 요소에 아래와 같은 선택자를 반드시 지정한다.
-
-- 게임을 다시 시작하는 재시작 button 태그는 `game-restart-button` id를 가진다.
-  - 예) `<button id="game-restart-button">재시작</button>`
 
 ### 라이브러리
-- 컴퓨터의 랜덤 값은 반드시 JavaScript의 `Math.Random` 대신 [`MissionUtils` 라이브러리](https://github.com/woowacourse-projects/javascript-mission-utils#mission-utils)의 `Random.pickNumberInRange`를 사용해 구한다. (`MissionUtils`은 window객체 내에 포함되어 있음)
+- 컴퓨터의 랜덤 값은 반드시 JavaScript의 `Math.Random` 대신 [`MissionUtils` 라이브러리](https://github.com/woowacourse-projects/javascript-mission-utils#mission-utils)의 `Random.pickNumberInRange`를 사용해 구한다.
+  - `MissionUtils` 라이브러리 스크립트는 `index.html`에 이미 포함되어 전역 객체에 추가되어 있으므로, 따로 `import` 하지 않아도 구현 코드 어디에서든 사용할 수 있다.
+
+  ```javascript
+  // ex)
+  const randomNumber = Random.pickNumberInRange(1, 9);
+  ```
 
 ### 공통 요구사항
 
 - 외부 라이브러리(jQuery, Lodash 등)를 사용하지 않고, 순수 Vanilla JS로만 구현한다.
-- **자바스크립트 코드 컨벤션을 지키면서 프로그래밍** 한다
-  - [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
-  - [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-  - [JavaScript Standard Style](https://standardjs.com)
-  - [NHN FE개발랩](https://ui.toast.com/fe-guide/ko_CODING-CONVENTION)
+- **[자바스크립트 코드 컨벤션](https://github.com/woowacourse/woowacourse-docs/tree/feature/styleguide/styleguide/javascript)을 지키면서 프로그래밍** 한다.
 - **indent(인덴트, 들여쓰기) depth를 3이 넘지 않도록 구현한다. 2까지만 허용**한다.
   - 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.
   - 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메소드)를 분리하면 된다.
